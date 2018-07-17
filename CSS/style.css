@@ -1,0 +1,599 @@
+/* couleur :
+facebook : #4267b2 
+twitter : #1da1f2
+pinterest : #bd081c
+rouge : #ee342B */
+
+* {
+    box-sizing: border-box ; /* permet le calcul automatique des marges et padding des bordures */
+    transition: 0.5s;
+} 
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+body{
+    font-family: "Open Sans Light", arial, sans-serif;
+    margin: 0;
+    background-color: #CCC;
+}
+.container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* toujours insérer le container de cette manière et ne rien y mettre d'autre */
+
+img{
+    max-width: 100%;
+}
+/* permet aux images de ne pas dépasser de leurs parents */
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*******************************************/
+/****************** DIAPO ******************/
+/*******************************************/
+#diapo{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+#diapo figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: monanimation 20s infinite;
+}
+#diapo figure img {
+    width: 20%;
+    float: left;
+}
+@keyframes monanimation {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+/***********************************************/
+/****************** FIN DIAPO ******************/
+/***********************************************/
+
+/********************************************/
+/****************** HEADER ******************/
+/********************************************/
+/*header>ul>li{
+    display: inline-block;
+    margin-right: 2.5%;
+    padding-bottom: 1%;
+}*/
+a {
+    text-decoration: none;
+}
+header a:visited, header a:link{
+    color:white;
+}
+header a:hover{
+    color:#ee342B;    
+}
+h1 {
+    color: #555;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+header{
+    color: white;
+}
+#picto{
+    text-align: right;
+    word-spacing: 25px;
+}
+
+#menu{
+    display: flex;
+    align-items: flex-end;
+}
+header ul li{
+    margin-right: 2.5%;
+    padding-bottom: 1%;
+}
+.sousmenu{
+    display: none;
+}
+#menu li{
+    position: relative;
+}
+#menu li ul{
+    position: absolute;
+    z-index: 1;
+}
+#menu li:hover > ul{
+    display: block;
+    background-color: black;
+    padding: 3%;
+    border-radius: 5%;
+    width: 150%;
+}
+/************************************************/
+/****************** FIN HEADER ******************/
+/************************************************/
+
+#header, #footer{
+    background-color: #000;
+}
+.facebook a:hover{
+    color: #4267b2;
+}
+
+/********************************************/
+/****************** FOOTER ******************/
+/********************************************/
+#footer{
+    color: darkgrey;
+}
+footer a:visited, footer a:link{
+    color: darkgray;
+}
+
+footer nav ul a:hover{
+    color:#ee342B;    
+}
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+footer address{
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+}
+footer nav{
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+}
+footer nav:nth-child(4){
+    padding-top: 30px;
+}
+/*footer address p:nth-child(1){
+    text-decoration: inherit;
+    font-size: 25px;
+    color: whitesmoke
+}*/
+footer nav img a:hover{
+    color: white;
+}
+/************************************************/
+/****************** FIN FOOTER ******************/
+/************************************************/
+
+.facebook a:hover{
+    color: #4267b2;
+}
+.twitter a:hover{
+    color: #1da1f2;
+}
+.pinterest a:hover{
+    color: #bd081c;
+}
+
+/*****************************************************/
+/****************** BOUTON PARTAGER ******************/
+/*****************************************************/
+/*#partage i{
+    display: block;
+    padding: 25% 15%;
+}*/
+#partage{
+    position: fixed;
+    left: 0;
+    top: 40%;
+    background-color: #000;
+    border-radius: 10%;
+}
+#partage div{
+    padding: 5px;
+}
+#partage a:visited, #partage a:link{
+    color: white;
+}
+#partage .facebook a:hover{
+    color: #4267b2;
+}
+#partage .twitter a:hover{
+    color: #1da1f2;
+}
+#partage .pinterest a:hover{
+    color: #bd081c;
+}
+/*********************************************************/
+/****************** FIN BOUTON PARTAGER ******************/
+/*********************************************************/
+
+/***********************************************/
+/****************** PREFOOTER ******************/
+/***********************************************/
+#prefooter{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+/*    align-items: center;
+    align-content: center; ----> ne fonctionnent pas */
+    text-align: center;
+    background-color: #FFF;
+    color: #000;
+}
+#prefooter a:visited, #prefooter a:link{
+    color: #000;
+}
+#prefooter a:hover{
+    background-color: #000;
+    color: #ee342B;
+/*    animation-timing-function: ease;
+    animation-delay: 0.3s;*/
+}
+#prefooter a{
+    width: 20%;
+}
+/*#prefooter a{
+    text-align: center;
+    align-items: center;
+}*/
+/***************************************************/
+/****************** FIN PREFOOTER ******************/
+/***************************************************/
+
+/******************************************/
+/****************** MAIN ******************/
+/****************** INDEX *****************/
+/******************************************/
+main{
+    margin: 2%;
+}
+#main{
+    background-color: #CCC; 
+}
+#article p{
+    color: white;
+    font-size: 0.9rem;
+}
+#article{
+    background-color: #000;
+    border-radius: 10px;
+    padding: 2%;
+    margin-top: 2%;
+}
+#article img{
+    float: left;
+    margin-right: 50px;
+}
+#gamme{
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 2% 2%;
+}
+.index section article{
+    float: left;
+    width: 33.33%;
+    padding: 5%;
+}
+.index section {
+    margin-top: 1%;
+}
+.index section h3{
+    text-align: center;
+}
+.index section img:hover{
+    transform: scale(1.2);
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.index section a:visited, .index section a:link{
+    color: #000;
+}
+.index section article a:hover{
+    color: grey;
+}
+.index h1{
+    padding-bottom: 3%;
+}
+.titreblanc{
+    color: white;
+}
+/**********************************************/
+/******************** INDEX *******************/
+/****************** FIN MAIN ******************/
+/**********************************************/
+
+/******************************************/
+/****************** MAIN ******************/
+/******************* DX1 ******************/
+/******************************************/
+.dx1{
+    text-align: justify;
+}
+.dx1 img {
+    width: 90%;
+    margin-left: 5%;
+}
+.dx1 article img {
+    width: 49%;
+    float: left;
+    margin: auto;
+}
+.dx1 article p:nth-of-type(1){
+    margin-left: 20px;
+}
+.dir-right{
+    color: #555;
+}
+.dir-right:before{
+    content: "\f061";
+    font-family:"FontAwesome";
+    color: red;
+}
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #555}
+/* sélecteur pair/impair */
+
+table caption{
+    background-color: #000;
+    color: whitesmoke;
+    padding: 2%;
+}
+table th{
+    background-color: #FFF
+}
+table td, table th{
+    padding: 1%;
+    border: 1px black solid;
+}
+table{
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.panier:visited, .panier:link{
+    color: whitesmoke;
+    background-color: #000;
+}
+
+.panier:hover{
+    background-color: #CCC;
+    color: #000;
+}
+.panier{
+    border-radius: 10% 30% 10% 20%;
+    padding: 1%;
+}
+.panier i{
+    margin-right: 1.5%;
+}
+#traitshop{
+    margin-bottom: 9px;
+}
+/**********************************************/
+/********************* DX1 ********************/
+/****************** FIN MAIN ******************/
+/**********************************************/
+
+/******************************************/
+/****************** MAIN ******************/
+/**************** CONTACT *****************/
+/******************************************/
+.contact h1:before{
+    content: "\f061";
+    font-family:"FontAwesome";
+    color: red;
+}
+.contact form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact form fieldset{
+    flex-basis: 49%;
+}
+/* fieldset flex basis 50% */
+.presentezvous input{
+    width: 100%;
+    padding: 3%;
+    margin: 1% 0;
+    border: none;
+    border-radius: 3px;
+}
+.contact select, .contact textarea{
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+}
+.contact select{
+    padding: 2%;
+}
+/**********************************************/
+/******************* CONTACT ******************/
+/****************** FIN MAIN ******************/
+/**********************************************/
+
+
+/******************************************/
+/***************** MAIN *******************/
+/*********** ELEMENTS INTEGRES ************/
+/******************************************/
+.blog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.blog h1{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+}
+.blog article{
+    flex-basis: 32%;
+    padding: 2%;
+    border: 1px solid darkgray;
+    margin: 3px;
+    text-align: center;
+}
+.blog img{
+    max-height: 150px;
+}
+.elements h1:before{
+    content: "\f061";
+    font-family:"FontAwesome";
+    color: red;
+}
+.elements section a:visited, .elements section a:link{
+    color: #555;
+}
+.elements section article a:hover{
+    color: grey;
+}
+/**********************************************/
+/************** ELEMENTS INTEGRES *************/
+/***************** FIN MAIN *******************/
+/**********************************************/
+
+/**********************************************/
+/******************* RWD **********************/
+/**********************************************/
+@media screen and (max-width:768px){
+    body {
+        margin: 0;
+    }
+    /* HEADER */
+    #menu{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 3px;
+    }
+    #diapo{
+        display: none;
+    }
+    #picto{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    header{
+        text-align: center;
+    }
+    #menu li:hover > ul{
+        display: none;
+    }
+    
+    /* FOOTER */
+    footer address{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    footer nav{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* PREFOOTER */
+    #prefooter{
+        flex-direction: column;
+    }
+    #prefooter a{
+        width: 100%;
+    }
+    
+    /* BOUTON PARTAGE */
+    #partage{
+        position: absolute;
+        top: 2%;
+    }
+    
+    /* MAIN INDEX */
+    #article img{
+        float: none;
+        margin: auto;
+    }
+    .index section article{
+        float: none;
+        width: 90%;
+    }
+    /* MAIN DX1 */
+    .dx1 h1 {
+        text-align: center;
+    }
+    .dx1{
+        padding: 2% 3%;
+    }
+    table {
+        width: 100%;
+    }
+    .dx1 article img {
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .dx1 article p:nth-of-type(1){
+        margin: auto;
+    }
+    
+    /* MAIN CONTACT */
+    .contact {
+        padding: 25px;
+    }
+    .contact form {
+        flex-direction: column;
+     /*   width: 90%;
+        margin-left: 5%;*/
+    }
+    .presentezvous input {
+        padding: 5px;
+        margin: auto;
+    }
+    .contact select {
+        padding: 5px;
+    }
+    .contact textarea {
+        height: 100px;
+    }
+    .contact button {
+        width: 20%;
+        align-self: center;
+    }
+    /* ELEMENTS INTEGRES */
+    .blog {
+        flex-direction: column;
+        width: 100%;
+        padding: 25px;
+    }
+}
+/**********************************************/
+/***************** FIN RWD ********************/
+/**********************************************/
